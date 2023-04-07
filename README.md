@@ -36,22 +36,33 @@
 	
 <h3>Success Stories</h3>
 <img src="/Read me photos/Success-stories.png" alt="Success Stories Image">
+
+<p>NGOs can register themselves on the platform by filling out a form that includes their contact details, Registration no. and many more details.</p>
 	
-<h3>Success Stories</h3>
-<img src="/Read me photos/Success-stories.png" alt="Success Stories Image">
+<h3>Registration Page</h3>
+<img src="/Read me photos/Registration.png" alt="Registration Page">
 
-<p>NGOs can register themselves on the platform by filling out a form that includes their mission, location, and contact details.</p>
-
-<h3>Fundraising campaign</h3>
-<img src="/screenshots/fundraising-campaign.png" alt="Fundraising campaign">
+<h3>Login Page for NGO's</h3>
+<img src="/screenshots/NGO-User-login.png" alt="Login Page for NGO's">
+	
+<h3>Details about Fundraising</h3>
+<img src="/screenshots/Details-cause.png" alt="Details about Fundraising">
 
 <p>NGOs can create fundraising campaigns on the platform and accept donations from individuals and organizations.</p>
 
-<h3>Donation tracking</h3>
-<img src="/screenshots/donation-tracking.png" alt="Donation tracking">
+<h3>Fundraisers Page</h3>
+<img src="/screenshots/Fundraisers-1.png" alt="Fundraisers-1">
+<img src="/screenshots/Fundraisers-2.png" alt="Fundraisers-2">
 
 <p>NGOs can track all donations they receive through the platform and see the progress of their fundraising campaigns.</p>
 
-<h3>Donor management</h3>
-<img src="/screenshots/donor-management.png" alt="Donor management">
+<h3>Payment Page</h3>
+<img src="/screenshots/Payment.png" alt="Payment Page">
+	
+<h3>About Us Page</h3>
+<img src="/screenshots/About us-1.png" alt="About us-1">
+<img src="/screenshots/About us-2.png" alt="About us-2">
+	
+<h3>Contact Us Page</h3>
+<img src="/screenshots/Contact us.png" alt="Comtact us">
 </body>
