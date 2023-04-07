@@ -25,8 +25,20 @@
 
 <p>The homepage displays an overview of the platform's features and highlights ongoing fundraising campaigns.</p>
 
-<h3>NGO registration</h3>
-<img src="/screenshots/ngo-registration.png" alt="NGO registration">
+<h3>Sign Up</h3>
+<img src="/Read me photos/Sign up.png" alt="Sign Up Image">
+	
+<h3>Log In</h3>
+<img src="/Read me photos/Login.png" alt="Log In Image">
+
+<h3>Non-governmental organizations</h3>
+<img src="/Read me photos/NGO's.png" alt="NGO Image">
+	
+<h3>Success Stories</h3>
+<img src="/Read me photos/Success-stories.png" alt="Success Stories Image">
+	
+<h3>Success Stories</h3>
+<img src="/Read me photos/Success-stories.png" alt="Success Stories Image">
 
 <p>NGOs can register themselves on the platform by filling out a form that includes their mission, location, and contact details.</p>
 
