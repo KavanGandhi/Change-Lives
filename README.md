@@ -52,7 +52,7 @@
 
 <h3>Fundraisers Page</h3>
 <img src="/Read me photos/Fundraisers-1.png" alt="Fundraisers-1">
-<img src="/Read me photos/Fundraisers-2.png" alt="Fundraisers-2">
+<img src="/Read me photos/Fundraisers2.png" alt="Fundraisers-2">
 
 <p style="font-size=50px;">NGOs can track all donations they receive through the platform and see the progress of their fundraising campaigns.</p>
 
@@ -65,4 +65,19 @@
 	
 <h3>Contact Us Page</h3>
 <img src="/Read me photos/Contact us.png" alt="Comtact us">
+
+<h2>Tech Stack</h2>
+<ul>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JS</li>
+	<li>Django</li>
+</ul>
+
+<h2>Project made by: </h2>
+	<ul>
+	<b><li>Kavan Gandhi </li></b>
+	<b><li>Ketul Pandya</li></b>
+	<b><li>Jinesh Dolia</li></b>
+</ul>
 </body>
