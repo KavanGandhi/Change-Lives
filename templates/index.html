@@ -1,0 +1,437 @@
+{% load static %}
+<html lang="en">
+
+<head>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6f8d1ddd75.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}">
+  <link rel="stylesheet" href="{% static 'css/index.css'%}">
+  <style>
+    .dropbtn {
+      background-color: #9eee9c;
+      color: black; 
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      font-family: 'PT Serif', serif;
+      font-size: 1rem;
+      
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 0 0 0 0;
+      /* width: 50%; */
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #9eee9c;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <img src="{% static 'images/prototype (6).png'%}" style="ba" alt=""> -->
+  <!-- navvar section -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/admin">
+        <img class="logo" src="{% static '/images/logo.png'%}" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/fundraiser">Fundraisers</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Shop</a>
+          </li> -->
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="/patient">Patient Details</a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="/registration">Register</a>
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About us</a>
+          </li>
+          <li class="nav-item contact">
+            <a class="nav-link" href="/contact">Contact us</a>
+          </li>
+        </ul>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        {% if user.is_authenticated%}
+        <div class="dropdown">
+          <button class="dropbtn">Welcome {{request.user}}</button>
+          <div class="dropdown-content">
+            <a href="/logout">logout</a>
+          </div>
+        </div>
+        {% else %}
+        <!-- <div class="log-sign"> -->
+        <li class="navbar-nav">
+          <button class="btn" style="margin-right: 10px;" onclick="toggle()">Sign Up</button>
+        </li>
+        <li class="navbar-nav">
+          <button class="btn" onclick="signup_function()">Log In</button>
+        </li>
+      <!-- </div> -->
+
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}{% endif %}
+  <!-- image and text section -->
+  <div class="img-sec" id="blurs" style="color: aliceblue;">
+    <img class="img1" src="{% static '/images/ketto.webp'%}" alt="ok">
+    <div class="kavan">
+      <pre class="display-txt">
+              Finding a place to raise money for your problem?
+              We're there for you, you are at the right place.
+              <span class="trusted">
+              Most trusted and transparent fundraising 
+              platform.
+              </span>  
+          </pre>
+    </div>
+  </div>
+  <!-- Fundraiser heading -->
+  <div class="Fundraisers">
+    <h1 class="heading1">Non-governmental organizations</h1>
+    <h4 class="heading4">Take a glance over few NGO's</h3>
+  </div>
+
+  <div class="row" >
+    <div class="col-lg-4 col-md-6 col-sm-12 respons">
+      <div class="card card1" style="width: 20rem;">
+        <img src="{% static '/images/wid6409b5714f8cf.avif'%}" class="card-img-top sahara-img " alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sahara Foundation</h5>
+          <p class="card-text"> The Sahara Foundation is a non-profit organization dedicated to supporting children with
+            cancer and their families. Their mission is to provide access to quality treatment and care, as well as to
+            raise awareness about childhood cancer.they aim to alleviate some of the burden by providing financial
+            assistance and emotional support.
+
+          </p>
+        </div>
+
+        <!-- {% if user.is_authenticated %}
+        <div class="card-body">
+          <button class="btn" id="show-login" onclick="toggle()"><a href="/fundraiser">Payment</a> </button>
+        </div>
+        {% else %}
+        <div class="card-body">
+          <button class="btn" id="show-login" onclick="toggle()">Donate</button>
+        </div>
+        {% endif %} -->
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 respons">
+      <div class="card card1" style="width: 20rem;">
+        <img src="{% static '/images/2ndpic.jpg'%}" class="card-img-top goonj-img" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Goonj</h5>
+          <p class="card-text">One of Goonj's signature programs is their Cloth for Work initiative, which encourages
+            individuals and communities to exchange their labor for essential items, such as clothing or other daily
+            necessities. This approach not only helps to address basic needs, but it also fosters a sense of community
+            and encourages self-sufficiency. Lorem nvkeem</p>
+        </div>
+
+        <!-- {% if user.is_authenticated %}
+        <div class="card-body">
+          <button class="btn" id="show-login" onclick="toggle()"><a href="/fundraiser">Payment</a> </button>
+        </div>
+        {% else %}
+        <div class="card-body">
+          <button class="btn" id="show-login" onclick="toggle()">Donate</button>
+        </div>
+        {% endif %} -->
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6  col-sm-12 respons">
+      <div class="card card1" style="width: 20rem;">
+        <img src="{% static '/images/child2.png'%}" class="card-img-top ujjwal-img" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Ujjwal Bhavishya</h5>
+          <p class="card-text">Ujwal Bhavishya is an Indian non-profit organization that works towards providing
+            education and healthcare facilities to orphan children. Their aim is to empower these children with quality
+            education and provide them with opportunities to excel in their lives. They also focus on developing life
+            skills and providing emotional support to help these children grow confidence.</p>
+        </div>
+
+        <!-- {% if user.is_authenticated %}
+        <div class="card-body">
+          <button class="btn" id="show-login" onclick="toggle()"><a href="/fundraiser">Payment</a> </button>
+        </div>
+        {% else %}
+        <div class="card-body">
+          <button class="btn" id="show-login" onclick="toggle()">Donate</button>
+        </div>
+        {% endif %} -->
+      </div>
+    </div>
+  </div>
+  <!--  </div> -->
+  </div>
+  <form action="/signup" method="post" autocomplete="on">
+    {% csrf_token%}
+    <div id="popup" style="position: absolute;
+    top: -400px;">
+      <div class="close-btn" onclick="toggle()">&times;</div>
+      <div class="form">
+        <h2>Sign Up</h2>
+
+        <div class="form-element">
+          <label for="username">Username</label>
+          <input type="text" name='userr' id="userr" placeholder="Enter username">
+        </div>
+
+        <div class="form-element">
+          <label for="email">Email Id</label>
+          <input type="text" name='emaill' id="email" placeholder="Enter email">
+        </div>
+
+        <div class="form-element">
+          <label for="password">Password</label>
+          <input type="password" name='password' id="password" placeholder="Enter password">
+        </div>
+
+        <div class="form-element">
+          <input type="checkbox" id="remember-me">
+          <label for="remember-me">Remember me</label>
+        </div>
+
+        <div class="form-element">
+          <button>Sign Up</button>
+        </div>
+
+        <div class="form-element">
+          <a href="#">Forgot password?</a>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+
+  <form action="/login" method="post" autocomplete="on">
+    {% csrf_token%}
+    <div id="popups" style="position: absolute;
+    top: 56%;">
+      <div class="close-btns" onclick="signup_function()">&times;</div>
+      <div class="forms">
+        <h2>Log In</h2>
+        <div class="form-elements">
+          <label for="username">Username</label>
+          <input type="text" name='user_login' id="userr" placeholder="Enter username">
+        </div>
+
+        <div class="form-elements">
+          <label for="password">Password</label>
+          
+          <input type="password" name='password_login' id="password" placeholder="Enter password">
+        </div>
+
+        <div class="form-elements">
+          <button>Log In</button>
+        </div>
+
+        <div class="form-elements">
+          <a href="#">Forgot password?</a>
+        </div>
+
+      </div>
+
+    </div>
+  </form>
+
+
+  <div class="Success">
+    <h1 class="heading1">Success Stories</h1>
+  </div>
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static '/images/chandler1.png'%}" class="d-block friends" alt="...">
+        <p class="para-text">Kirtan's story is an inspiring example of how community support and fundraising efforts can
+          make a difference in the lives of those struggling with serious health issues.
+
+          Kirtan was suffering from a dangerous disease, which required expensive medical treatment that his family was
+          struggling to afford. Fortunately, his community rallied around him and launched a fundraising campaign to
+          help cover the costs of his treatment.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/rachel1.png'%}" class="d-block friends" alt="...">
+        <p class="para-text">After losing both of her parents in a tragic accident, Riya was left without any financial
+          support to continue her education. Recognizing the importance of education and the challenges that Riya was
+          facing, her community rallied together to launch a fundraising campaign to support her education.The
+          community's efforts not only provided financial support for Riya but also demonstrated the power of coming
+          together to support those in need. The outpouring of support provided emotional support for Riya during this
+          difficult time, giving her a sense of hope and optimism for the future.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static '/images/joey1.png'%}" class="d-block friends " alt="...">
+        <p class="para-text">A fund was raised for a boy named Dev to support his education and bright future. Education
+          is a key factor in a child's development and can have a profound impact on their future opportunities and
+          success.
+
+          By raising funds for Dev's education, the community has shown their support and belief in his potential. With
+          access to quality education, Dev will have the opportunity to develop his knowledge, skills, and talents, and
+          pursue his passions and interests.
+
+          Investing in education is not only beneficial for individuals like Dev but also for society as a whole.</p>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>About</h6>
+          <p class="text-justify">Change Lives is a website that aims to empower NGOs and social organizations to make a
+            significant impact on society by providing them with a platform to showcase their work and raise funds for
+            their causes. The website acts as an intermediary between NGOs and potential donors, facilitating donations
+            to a range of causes, including education, healthcare, environment, poverty alleviation, and more.</p>
+        </div>
+
+        <!-- <div class="col-xs-6 col-md-3">
+              <h6>Categories</h6>
+              <ul class="footer-links">
+                <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+                <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+                <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+                <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+                <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+                <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+              </ul>
+            </div> -->
+
+
+
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+            <a href="#">Change Lives</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="https://twitter.com/kavan_gandhi1"><i class="fa fa-twitter"></i></a></li>
+            <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
+            <li><a class="linkedin" href="https://www.linkedin.com/in/kavan-gandhi-59a85a224/"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggle() {
+      var blur = document.getElementById("blurs").classList;
+      blur.toggle("actives");
+      var popup = document.getElementById("popup").classList;
+      popup.toggle("active");
+    };
+    function signup_function() {
+      var blur = document.getElementById("blurs").classList;
+      blur.toggle("actives");
+      var popups = document.getElementById("popups").classList;
+      popups.toggle("actives");
+    }
+  </script>
+</body>
+
+</html>
