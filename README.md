@@ -21,7 +21,7 @@
 <p>Here are some screenshots of the Change Lives platform:</p>
 
 <h3>Homepage</h3>
-<img src="/screenshots/homepage.png" alt="Homepage">
+<img src="/Read me photos/Home Page.png" alt="Homepage">
 
 <p>The homepage displays an overview of the platform's features and highlights ongoing fundraising campaigns.</p>
 
