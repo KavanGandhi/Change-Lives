@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Change Lives - README</title>
+<!-- 	<title>Change Lives - README</title> -->
 </head>
 <body>
 	<h1>Change Lives</h1>
@@ -23,7 +23,7 @@
 <h3>Homepage</h3>
 <img src="/Read me photos/Home Page.png" alt="Homepage">
 
-<p>The homepage displays an overview of the platform's features and highlights ongoing fundraising campaigns.</p>
+<p style="font-size=50px;">The homepage displays an overview of the platform's features and highlights ongoing fundraising campaigns.</p>
 
 <h3>Sign Up</h3>
 <img src="/Read me photos/Sign up.png" alt="Sign Up Image">
@@ -43,26 +43,26 @@
 <img src="/Read me photos/Registration.png" alt="Registration Page">
 
 <h3>Login Page for NGO's</h3>
-<img src="/screenshots/NGO-User-login.png" alt="Login Page for NGO's">
+<img src="/Read me photos/NGO-User-login.png" alt="Login Page for NGO's">
 	
 <h3>Details about Fundraising</h3>
-<img src="/screenshots/Details-cause.png" alt="Details about Fundraising">
+<img src="/Read me photos/Details-cause.png" alt="Details about Fundraising">
 
 <p>NGOs can create fundraising campaigns on the platform and accept donations from individuals and organizations.</p>
 
 <h3>Fundraisers Page</h3>
-<img src="/screenshots/Fundraisers-1.png" alt="Fundraisers-1">
-<img src="/screenshots/Fundraisers-2.png" alt="Fundraisers-2">
+<img src="/Read me photos/Fundraisers-1.png" alt="Fundraisers-1">
+<img src="/Read me photos/Fundraisers-2.png" alt="Fundraisers-2">
 
-<p>NGOs can track all donations they receive through the platform and see the progress of their fundraising campaigns.</p>
+<p style="font-size=50px;">NGOs can track all donations they receive through the platform and see the progress of their fundraising campaigns.</p>
 
 <h3>Payment Page</h3>
-<img src="/screenshots/Payment.png" alt="Payment Page">
+<img src="/Read me photos/Payment.png" alt="Payment Page">
 	
 <h3>About Us Page</h3>
-<img src="/screenshots/About us-1.png" alt="About us-1">
-<img src="/screenshots/About us-2.png" alt="About us-2">
+<img src="/Read me photos/About us-1.png" alt="About us-1">
+<img src="/Read me photos/About us-2.png" alt="About us-2">
 	
 <h3>Contact Us Page</h3>
-<img src="/screenshots/Contact us.png" alt="Comtact us">
+<img src="/Read me photos/Contact us.png" alt="Comtact us">
 </body>
