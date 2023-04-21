@@ -8,4 +8,4 @@ admin.site.register(Registration)
 admin.site.register(Payment_model)
 # admin.site.register(uplaod_file)
 
-admin.site.register(Patient_Model)
+admin.site.register(Patient_Model) 
