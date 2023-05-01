@@ -42,7 +42,7 @@
 <h3>Registration Page</h3>
 <img src="/Read me photos/Registration.png" alt="Registration Page">
 
-<h3>Login Page for NGO's</h3>
+<h3>Login Page for NGO's:</h3>
 <img src="/Read me photos/NGO-User-login.png" alt="Login Page for NGO's">
 	
 <h3>Details about Fundraising</h3>
@@ -73,7 +73,7 @@
 	<li>JS</li>
 	<li>Django</li>
 </ul>
-
+:
 <h2>Project made by: </h2>
 	<ul>
 	<b><li>Kavan Gandhi </li></b>
