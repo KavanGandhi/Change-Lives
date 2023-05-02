@@ -56,7 +56,8 @@
 
 <p style="font-size=50px;">NGOs can track all donations they receive through the platform and see the progress of their fundraising campaigns.</p>
 
-<h3>Payment Page</h3>
+<h3>Payment Page</h3>:
+
 <img src="/Read me photos/Payment.png" alt="Payment Page">
 	
 <h3>About Us Page</h3>
