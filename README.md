@@ -74,7 +74,6 @@
 	<li>JS</li>
 	<li>Django</li>
 </ul>
-:
 <h2>Project made by: </h2>
 	<ul>
 	<b><li>Kavan Gandhi </li></b>
