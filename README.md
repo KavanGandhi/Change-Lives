@@ -5,7 +5,9 @@
 </head>
 <body>
 	<h1>Change Lives</h1>
-  <p>Change Lives is a web-based platform where NGOs can register themselves, raise funds, and accept donations from individuals and organizations. The platform aims to connect NGOs and donors to create positive change in society.</p>
+  <p>Change Lives is a web-based platform where NGOs can register themselves, raise funds, and accept donations from individuals and
+
+ organizations. The platform aims to connect NGOs and donors to create positive change in society.</p>
 
 <h2>Features</h2>
 
